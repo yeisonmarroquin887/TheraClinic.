@@ -1,0 +1,76 @@
+.Admint {
+	background: var(--color7);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px var(--color5);
+	padding: 1em;
+	max-width: 500px;
+	width: 100%;
+	margin: auto;
+	margin-top: 5em;
+  }
+  
+  /* Form title */
+  .Admint h1 {
+	font-size: 1.8em;
+	color: var(--color3);
+	text-align: center;
+	margin-bottom: 1em;
+  }
+  
+  /* Form styles */
+  .Admint > form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1em;
+  }
+  
+  /* Form fields */
+  .Admint > form > div {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1em;
+  }
+  
+  .Admint label {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	color: var(--color2);
+  }
+  
+  .Admint input {
+	padding: 0.75em;
+	border: 1px solid var(--color5);
+	border-radius: 4px;
+	font-size: 1em;
+	transition: border-color 0.3s;
+  }
+  
+  .Admint input:focus {
+	border-color: var(--color3);
+	outline: none;
+  }
+  
+  /* Update button */
+  .Admint button {
+	grid-column: span 2;
+	padding: 0.75em;
+	background: var(--color2);
+	color: var(--color7);
+	border: none;
+	border-radius: 4px;
+	font-size: 1em;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  .Admint button:hover {
+	background: var(--color3);
+  }
+
+  @media (max-width:550px) {
+	.Admint > form {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	  }
+  }

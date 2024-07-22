@@ -1,0 +1,470 @@
+.Add {
+	width: 100%;
+}
+
+.Add > div {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	justify-content: start;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+.Add > div > button {
+	width: 100%;
+	max-width: 13em;
+	border: none;
+	padding: .5em;
+	background-color: var(--color3);
+	color: var(--color7);
+	cursor: pointer;
+	border-radius: .3em;
+	transition: background-color 800ms ease;
+}
+
+.Add > button:hover {
+	background-color: var(--color2);
+}
+
+.Addmessage {
+	font-size: 1em;
+}
+
+
+
+
+.Add__form {
+	box-shadow: 0 0 10px var(--color4);
+	background-color: var(--color5);
+	padding: 1em;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	max-width: 25em;
+
+}
+
+.Add__form > div {
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+}
+
+.Add__form > div  > label {
+	font-size: 1.1em;
+	font-weight: 500;
+	color: var(--color2);
+}
+
+.Add__form > div  > input {
+	padding: .5em;
+	border: none;
+	border-radius: .2em;
+}
+
+.Add__btn {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.Add__btn > button {
+	padding: .4em;
+	width: 100%;
+	max-width: 10em;
+	background-color: var(--color2);
+	color: var(--color7);
+	border: none;
+	border-radius: .4em;
+	cursor: pointer;
+}
+
+.Add__form-chekeo{
+	box-shadow: 0 0 10px var(--color4);
+	background-color: var(--color5);
+	padding: 1em;
+	width: 100%;
+	max-width: 30em;
+	align-items: center;
+	
+}
+
+.Add__form-chekeo > div {
+	padding: 1em;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1em;
+
+}
+
+.Add__form-chekeo > div > div {
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+}
+
+.Add__form-chekeo> div > div  > label {
+	font-size: 1.1em;
+	font-weight: 500;
+	color: var(--color2);
+}
+.Add__form-chekeo > div > div  > input, select {
+	padding: .5em;
+	border: none;
+	border-radius: .2em;
+}
+
+.Add__btn-chekeo {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.Add__btn-chekeo > button {
+	padding: .4em;
+	width: 100%;
+	max-width: 10em;
+	background-color: var(--color2);
+	color: var(--color7);
+	border: none;
+	border-radius: .4em;
+	cursor: pointer;
+}
+
+
+.AddDeuda__info  {
+	display: grid;
+}
+
+.AddDeuda__info > article {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.AddDeuda__info > article > button {
+	border: none;
+	padding: .5em;
+	background-color: var(--color2);
+	color: var(--color7);
+	border-radius: .2em;
+	cursor: pointer;
+}
+
+.AddDeuda__info > article > button:hover {
+	background-color: var(--color3);
+}
+
+.AddNewDeuda {
+	position: fixed;
+	left: 50%;
+	right: 50%;
+	top: 0;
+	height: 100vh;
+	margin-top: 24.5em;
+	transform: translate(-50%, -50%);
+	background-color: var(--color5);
+	padding: 1em;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.AddNewDeuda::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color5);
+    backdrop-filter: blur(2px);
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+.AddNewDeuda__close {
+	display: none;
+}
+
+.AddnewPdf {
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    margin-top: 24.5em;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    z-index: 10; 
+	background-color: var(--color5);
+}
+
+.AddnewPdf::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color5);
+    backdrop-filter: blur(2px);
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+
+.AddnewPdf__close {
+	display: none;
+}
+
+.AddNewDeuda > form {
+	background-color: var(--color7);
+	padding: 2em 3em 3em 3em;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+	0 6px 20px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 25em;
+	height: 100%;
+	max-height: 20em;
+	gap: 1.4em;
+	border-radius: .5em;
+}
+
+.AddNewDeuda form > div {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: .6em;
+}
+.AddNewDeuda > form > h3 {
+	text-align: center;
+	color: var(--color2);
+}
+
+.AddNewDeuda > form > div > label {
+	font-size: 1.1em;
+	color: var(--color3);
+	font-weight: 600;
+}
+
+.AddNewDeuda > form > div > input {
+	width: 100%;
+	border: none;
+	padding: .6em;
+	border: 1px solid var(--color5);
+	border-radius: .3em;
+}
+
+.AddNewDeuda > form > article {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.AddNewDeuda > form > article > button {
+	border: none;
+	padding: .5em;
+	width: 100%;
+	max-width: 10em;
+	color: var(--color7);
+	border-radius: .3em;
+	cursor: pointer;
+}
+
+.btn1 {
+	background-color: var(--color2);
+}
+
+.btn2 {
+	background-color: var(--color8);
+}
+
+.Deudas {
+	background-color: var(--color7);
+	position: fixed;
+	height: 70vh;
+	width: 100%;
+	max-width: 40em;
+	padding: 2em;
+	overflow-y: scroll;
+}
+
+.Deudas > h1 {
+	font-size: 1.5em;
+	margin-top: .5em;
+	margin-bottom: .4em;
+}
+
+.table-deudas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+.table-header-deuda, .table-data {
+    padding: 0.75em;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.Cancelar-deuda {
+	text-align: center;
+	width: 100%;
+	color: var(--color8);
+	cursor: pointer;
+}
+
+.table-row:hover {
+    background-color: var(--color7);
+}
+
+.message-deuda {
+    text-align: center;
+    margin-top: 1em;
+    color: var(--color3);
+}
+
+
+.Deudas > h1 {
+	color: var(--color8);
+	margin-top: 1.2em;
+}
+
+
+
+.message-deuda {
+	color: var(--color3);
+	font-weight: 600;
+}
+
+.volver-deuda {
+	background-color: var(--color8);
+	padding: .1em;
+	color: var(--color7);
+	font-size: 1.5em;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	max-width: 1.5em;
+	max-height: 1.5em;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: .5em 1em 1em 1em;
+	cursor: pointer;
+}
+
+.deuda-footer {
+	position: absolute;
+	background-color: var(--color2);
+	color: var(--color7);
+	max-width: 30em;
+	bottom: 0;
+	padding: 1em;
+	left: 0;
+}
+
+.Add__Examenes {
+	background-color: var(--color7);
+	padding: 2em;
+	position: absolute;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+	0 6px 20px rgba(0, 0, 0, 0.1);
+	border-radius: .4em;
+	margin-top: 1em;
+}
+
+.Add__Examenes-title {
+	font-size: 1.4em;
+	color: var(--color8);
+}
+
+.Add__Examenes-Form {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	width: 100%;
+}
+
+.Add__Examenes-Form > div {
+	display: flex;
+	flex-direction: column;
+	gap: .6em;
+}
+
+.Add__Examenes-Form > div > label {
+	color: var(--color3);
+}
+
+.Add__Examenes-Form > div > input {
+	border: none;
+	padding: .5em;
+	border-radius: .4em;
+	border: 1px solid var(--color5);
+}
+
+.Add__Examenes-Form > div > input[type="file"]  {
+    color: var(--color2);
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.Add__Examenes-Form > div > input[type="file"]:hover {
+    background-color: var(--color5);
+    border-color: var(--color5);
+}
+
+
+.Add__Examenes-Form > div >  input[type="file"]:focus {
+    outline: none;
+    border-color: var(--color3);
+    box-shadow: 0 0 5px rgba(56, 142, 60, 0.5);
+}
+
+.AddNewPdf__btn {
+	display: flex;
+	justify-content: space-around;
+}
+
+.addnewPdf {
+	background-color: var(--color2);
+	padding: .4em;
+	border: none;
+	width: 100%;
+	max-width: 8em;
+	color: var(--color7);
+	cursor: pointer;
+	border-radius: .3em;
+}
+
+.addnone {
+	background-color: var(--color8);
+	padding: .4em;
+	border: none;
+	width: 100%;
+	max-width: 8em;
+	color: var(--color7);
+	cursor: pointer;
+	border-radius: .3em;
+}
+
+@media (max-width: 600px) {
+	.Add__form-chekeo > div {
+		padding: 1em;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1em;
+	
+	}
+	
+}

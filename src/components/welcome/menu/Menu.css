@@ -1,0 +1,167 @@
+.Menu {
+	width: 100%;
+	position: relative;
+	z-index: 100000;
+}
+
+.Menu__header {
+	display: flex;
+	border-bottom: 1px solid var(--color3);
+	padding: 1em;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 2em;
+}
+
+.Menu__header > div {
+	display: flex;
+	align-items: center;
+	gap: .7em;
+}
+
+.adddcuh {
+	display: none;
+}
+
+.Menu__header > div > figure {
+	font-size: 2.2em;
+	background-color: var(--color5);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .15em;
+	border: 2px solid var(--color2);
+}
+
+.Menu__header > div > figure > i {
+	font-size: .85em;
+	color: var(--color2);
+}
+
+.Menu__header > div > div > h1 {
+	font-size: 1.2em;
+	font-weight: 500;
+	color: var(--color2);
+}
+
+.Menu__header > div > div > h3 {
+	font-size: .8em;
+	font-weight: 400;
+}
+
+.Off-Admin  {
+	color:  var(--color1);
+	font-size: .9em;
+	cursor: pointer;	
+	padding: .5em;
+}
+
+.Active-Admin  {
+	color:  var(--color7);
+	font-size: .9em;
+	cursor: pointer;
+	padding: .5em;
+	background-color: var(--color2);
+
+	border-radius: 50%;
+}
+
+.Menu__buttons {
+	display: flex;
+	flex-direction: column;
+	margin-top: .8em;
+	gap: .1em;
+}
+
+.Menu__buttons > button > span {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.Pacientes___Button {
+	border: none;
+	padding: 1em 2em 1em 2em;
+	font-size: .9em;
+	text-align: start;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.Pacientes___Button-active {
+	border: none;
+	padding: 1em 2em 1em 2em;
+	font-size: .9em;
+	text-align: start;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: transparent;
+	cursor: pointer;
+	background-color: var(--color2);
+	color: var(--color7);
+}
+
+.Citas___Button {
+	border: none;
+	padding: 1em 2em 1em 2em;
+	font-size: .9em;
+	text-align: start;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: transparent;
+	cursor: pointer;
+}
+.Citas___Button-active {
+	border: none;
+	padding: 1em 2em 1em 2em;
+	font-size: .9em;
+	text-align: start;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: transparent;
+	cursor: pointer;
+	background-color: var(--color2);
+	color: var(--color7);
+}
+.Menu__buttons > button > i {
+	color: var(--color7);
+	font-size: .6em;
+	cursor: pointer;
+}
+
+
+.Menu__exit {
+	padding: .4em;
+	display: flex;
+	justify-content: end;
+	position: absolute;
+	width: 100%;
+}
+
+.Menu__exit > i {
+	padding: .1em;
+	background-color: var(--color8);
+	color: var(--color7);
+	border-radius: 1em;
+	cursor: pointer;
+	font-size: 1.3em;
+}
+
+@media (min-width: 809px) {
+	.Menu__exit {
+		padding: .4em;
+		display: flex;
+		justify-content: end;
+		position: absolute;
+		width: 100%;
+		display: none;
+	}
+
+}

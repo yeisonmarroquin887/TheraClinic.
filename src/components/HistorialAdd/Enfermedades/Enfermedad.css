@@ -1,0 +1,28 @@
+.Enfermedades {
+	margin-bottom: 2em;
+	margin-top: .7em;
+	display: flex;
+	flex-direction: column;
+	gap: .6em;
+}
+
+.Enfermedades > h3 {
+	color: var(--color2);
+	font-size: 1em;
+}
+
+.Enfermedades >  div {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+.Enfermedades >  div > i  {
+	width: 100%;
+	max-width: 20em;
+}
+
+.Enfermedades >  div > li {
+	width: 100%;
+	max-width: 10em;
+}

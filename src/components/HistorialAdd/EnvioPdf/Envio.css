@@ -1,0 +1,86 @@
+.pdf-container {
+	font-family: Arial, sans-serif;
+	padding: 20px;
+	border-radius: 8px;
+	max-width: 800px;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+	margin-top: 7em;
+  }
+  
+  .pdf-container::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	background-image: url(../../../../images/logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.3; /* Ajusta la opacidad según sea necesario */
+	transform: translate(-50%, -50%);
+	z-index: 0;
+  }
+
+  
+  /* Información del paciente */
+  .patient-info {
+	margin-bottom: 20px;
+  }
+
+  .patient-info > h1 {
+	text-align: center;
+	margin-bottom: 1em;
+	font-weight: 500;
+	font-size: 1.7em;
+	color: var(--color6);
+  }
+  
+  .patient-info ul {
+	list-style-type: none;
+	padding: 0;
+  }
+  
+  .patient-info li {
+	margin-bottom: 10px;
+	font-size: 16px;
+  }
+  
+  /* Información del chequeo */
+  .checkup-info ul {
+	list-style-type: none;
+	padding: 0;
+  }
+  
+  .checkup-info li {
+	margin-bottom: 10px;
+	font-size: 16px;
+  }
+  
+  /* Estilo del divisor */
+  .divider {
+	border: 0;
+	height: 1px;
+	background: #ccc;
+	margin: 20px 0;
+  }
+  
+  /* Títulos en negrita */
+  b {
+	color: #333;
+  }
+  
+  /* Ajustes de visualización en dispositivos móviles */
+  @media (max-width: 600px) {
+	.pdf-container {
+	  padding: 10px;
+	}
+  
+	.patient-info li, .checkup-info li {
+	  font-size: 14px;
+	}
+  }
+  

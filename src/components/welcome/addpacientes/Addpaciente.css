@@ -1,0 +1,231 @@
+.AddPaciente {
+	padding-top: 4em;
+	background-color: var(--color7);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+.AddTitle {
+	color: var(--color2);
+}
+
+.AddPaciente__menu {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	margin-bottom: 0em;
+	padding: 1em;
+}
+.AddPaciente__menu > li {
+	display: flex;
+	gap: 1em;
+}
+
+.AddPaciente__form {
+	padding-bottom: 3em;
+	display: flex;
+	flex-direction: column;
+}
+.AddPaciente__form > div {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	padding: 1em;
+}
+
+.AddPaciente__form > div > div {
+	display: flex;
+	flex-direction: column;
+	gap: .7em;
+}
+.AddPaciente__form > div > div > label {
+	display: flex;
+
+}
+
+.AddPaciente__form > div > div > input {
+	border: none;
+	border: 1px solid var(--color5);
+	padding: .4em;
+	border-radius: .6em;
+
+}
+.AddPaciente__form > div > div > select {
+	border: none;
+	border: 1px solid var(--color5);
+	padding: .4em;
+	border-radius: .6em;
+}
+.AddPaciente__Register {
+	padding: .5em;
+	background-color: var(--color2);
+	color: var(--color7);
+	font-size: 1.1em;
+	width: 100%;
+	max-width: 20em;
+	border: none;
+	margin: auto;
+	margin-top: 1em;
+	cursor: pointer;
+	
+}
+
+.VolverPacientes{
+	position: fixed;
+    width: 100%;
+    max-width: 7em;
+    top: 0;
+    margin-top: 6em;
+    border: none;
+    padding: .7em;
+    background-color: var(--color2) ;
+    color: var(--color7);
+    font-size: 1em;
+    cursor: pointer;
+	right: 0;
+}
+
+.AddAcompañante {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+	gap: 1em;
+	margin-top: 2em;
+	
+}
+
+.AddTitle {
+	font-size: 1.3em;
+}
+
+.AddAcompañante > div > div {
+	display: flex;
+	flex-direction: column;
+	text-align: start;
+	gap: .5em;
+	width: 100%;
+}
+
+.AddAcompañante > div > div > input {
+	border: none;
+	border: 1px solid var(--color5);
+	padding: .4em;
+	border-radius: .6em;
+	width: 13em;
+}
+
+.AddAcompañante > button {
+	padding: .5em;
+	background-color: var(--color2);
+	color: var(--color7);
+	font-size: 1.1em;
+	width: 100%;
+	max-width: 10em;
+	border: none;
+	margin-top: 1em;
+	cursor: pointer;
+	border-radius: .5em;
+}
+
+@media (min-width: 910px) {
+	
+	.AddPaciente__menu {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 2em;
+		margin-bottom: 0em;
+		padding: 1em;
+	}
+
+	.AddAcompañante {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		padding: 1em;
+		gap: 0em;		
+		width: 100%;
+		max-width: 30em;
+		margin-top: 1em;
+		margin: auto;
+	}
+	
+	.AddAcompañante > div {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1em;
+	}
+
+	.AddTitle {
+		font-size: 1.7em;
+		margin-bottom: 1em;
+	}
+
+	.AddAcompañante > div > input {
+		border: none;
+		border: 1px solid var(--color5);
+		padding: .4em;
+		border-radius: .6em;
+		width: 20em;
+	}
+	
+	.AddAcompañante > button {
+		padding: .5em;
+		background-color: var(--color2);
+		color: var(--color7);
+		font-size: 1.1em;
+		width: 100%;
+		max-width: 20em;
+		border: none;
+		margin-top: 1em;
+		cursor: pointer;
+		border-radius: .5em;
+	}
+
+	.AddPaciente__menu > li {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	.AddPaciente__form > div {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		padding: 1em 3em 1em 3em;
+	}
+
+
+	.AddPaciente__form > div > div > input {
+		border: none;
+		border: 1px solid var(--color5);
+		padding: .6em;
+		border-radius: .6em;
+	}
+
+	.AddPaciente__form > div > div > textarea {
+		border: none;
+		border: 1px solid var(--color5);
+		padding: .8em;
+		border-radius: .6em;
+		width: 100%;
+		max-width: 23em;
+	}
+
+	.AddPaciente__Register {
+		padding: .5em;
+		background-color: var(--color2);
+		color: var(--color7);
+		font-size: 1.1em;
+		width: 100%;
+		max-width: 20em;
+		border: none;
+		margin: auto;
+		margin-top: 3em;
+		border-radius: .5em;
+	}
+}

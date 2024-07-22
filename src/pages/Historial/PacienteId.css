@@ -1,0 +1,146 @@
+.PacienteId__Info {
+    width: 100%;
+    padding-top: 9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Volver {
+	position: fixed;
+	width: 100%;
+	max-width: 10em;
+	top: 0;
+	margin-top: 6em;
+	border: none;
+	padding: .7em;
+	background-color: var(--color2);
+	color: var(--color7);
+	font-size: 1em;
+	cursor: pointer;
+  z-index: 100000;
+}
+
+.PacienteId__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 61em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 3em;
+    margin-bottom: 3em;
+}
+
+.PacienteId__Title {
+    text-align: center;
+    margin-bottom: 1.2em;
+    color: var(--color3);
+}
+
+.PacienteId__form-info {
+    width: 100%;
+    max-width: 60em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+
+.PacienteId__form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.PacienteId__form-group > input {
+    padding: .5em;
+    border: none;
+    border-radius: .5em;
+    border: 1px solid  var(--color9);
+}
+
+.PacienteId__form-group > textarea {
+  padding: .5em;
+  border: none;
+  border-radius: .5em;
+  border: 1px solid  var(--color9);
+  width: 100%;
+  max-width: 20.4em;
+}
+
+.PacienteId__form-group > select {
+    padding: .5em;
+    border: none;
+    border-radius: .5em;
+    border: 1px solid var(--color9);
+}
+
+.PacienteId__buttons {
+  display: flex;
+  width: 100%;
+justify-content: end;
+}
+
+.PacienteId__buttons > button {
+  padding: .4em;
+  border: none;
+  background-color: var(--color2);
+  color: var(--color7);
+  width: 100%;
+  max-width: 10em;
+  font-size: 1.1em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.PacienteId__Info2 {
+  border-top: 1px solid var(--color2);
+  margin-top: 4em;
+  padding-top: 2em;
+}
+
+.PacienteId__Info2 > h1 {
+  color: var(--color2);
+  font-size: 1.7em;
+}
+
+.AddDeuda {
+  position: fixed;
+  z-index: 10000000000000000;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  justify-content: end;
+  max-width: 12em;
+}
+
+@media (max-width: 650px) {
+  .PacienteId__form-info {
+    width: 100%;
+    max-width: 60em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+}
+
+@media (max-width: 410px) {
+  .PacienteId__form-info {
+    width: 100%;
+    max-width: 60em;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+}

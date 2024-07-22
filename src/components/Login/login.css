@@ -1,0 +1,262 @@
+.Login {
+	background-color: var(--color5);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em;
+	height: 100vh;
+	gap: 2em;
+	position: relative;
+	padding-top: 4em;
+}
+
+.error {
+	position: absolute;
+	background-color: var(--color5);
+	backdrop-filter: blur(3px);
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 10000;
+
+}
+
+.error__oculto {
+	position: absolute;
+	backdrop-filter: blur(2px);
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	padding-top: 2em;
+	display: none;
+}
+
+.Login__header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--color7);
+	margin-top: 0em;
+	background-color: var(--color2);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	padding: 1em;
+}
+.Login__header > h2 {
+	color: var(--color6);
+	font-size: .9em;
+}
+
+.Login__form {
+	background-color: var(--color7);
+	width: 100%;
+	max-width: 38em;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                        0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: .5em;
+	margin-top: 4em;
+}
+
+.Login__form > figure > img {
+	border-radius: .5em .5em 0em 0em;
+	height: 7em;
+}
+
+.Login__datos {
+	padding: 3.6em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.Login__datos > div {
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+}
+.Login__datos > div > label {
+	font-size: 1.1em;
+	color: var(--color6);
+	font-weight: 600;
+}
+
+.Login__datos > div > input {
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid var(--color1);
+	width: 100%;
+}
+
+.Login__datos > div > input:focus {
+	outline: none;
+}
+
+.Login__datos > h3 {
+	width: 100%;
+    text-align: end;
+	font-size: .8em;
+	color: var(--color3);
+	cursor: pointer;
+}
+
+.Login__datos > h3:hover {
+	color: var(--colo);
+}
+
+.Login__datos > button {
+	width: 100%;
+	font-size: 1em;
+	max-width: 10em;
+	border: none;
+	padding: .4em;
+	background-color: var(--color2);
+	color: var(--color7);
+	border-radius: .3em;
+	cursor: pointer;
+	margin: auto;
+}
+
+.Login__datos > button:hover {
+	background-color: var(--color2);
+	color: var(--color5);
+}
+
+@media (min-width: 700px) {
+	.Login {
+		background-color: var(--color5);
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1em;
+		height: 100vh;
+		gap: 2em;
+		position: relative;
+		padding-top: 4em;
+		background-image: url(../../../images/logo.png);
+		
+	}
+	
+	.error {
+		position: absolute;
+		backdrop-filter: blur(4px);
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		display: flex;
+		align-items: start;
+		justify-content: center;
+		z-index: 1000;
+		padding-top: 2em;
+	}
+	
+	.error__oculto {
+		position: absolute;
+		backdrop-filter: blur(2px);
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		display: flex;
+		align-items: start;
+		justify-content: center;
+		padding-top: 2em;
+		display: none;
+	}
+	
+	.Login__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: var(--color7);
+		margin-top: 0em;
+		background-color: var(--color2);
+		width: 100%;
+		position: fixed;
+		top: 0;
+		padding: 1em;
+	}
+	.Login__header > h2 {
+		color: var(--color6);
+		font-size: .9em;
+	}
+	
+	.Login__form {
+		background-color: var(--color7);
+		width: 100%;
+		max-width: 38em;
+		box-shadow: 0 4px 8px (0, 0, 0, 0.1), 
+							0 6px 20px rgba(0, 0, 0, 0.1);
+		border-radius: .5em;
+		margin-top: 4em;
+	}
+	
+	.Login__form > figure > img {
+		border-radius: .5em .5em 0em 0em;
+		height: 7em;
+	}
+	
+	.Login__datos {
+		padding: 3.6em;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	
+	.Login__datos > div {
+		display: flex;
+		flex-direction: column;
+		gap: .5em;
+	}
+	.Login__datos > div > label {
+		font-size: 1.1em;
+		color: var(--color6);
+		font-weight: 600;
+	}
+	
+	.Login__datos > div > input {
+		border: none;
+		background-color: transparent;
+		border-bottom: 1px solid var(--color1);
+		width: 100%;
+	}
+	
+	.Login__datos > div > input:focus {
+		outline: none;
+	}
+	
+	.Login__datos > h3 {
+		width: 100%;
+		text-align: end;
+		font-size: .8em;
+		color: var(--color3);
+		cursor: pointer;
+	}
+	
+	.Login__datos > button {
+		width: 100%;
+		font-size: 1em;
+		max-width: 10em;
+		border: none;
+		padding: .4em;
+		background-color: var(--color2);
+		color: var(--color7);
+		border-radius: .3em;
+		cursor: pointer;
+		margin: auto;
+	}
+	
+	.Login__datos > button:hover {
+		background-color: var(--color2);
+		color: var(--color5);
+	}
+	
+}

@@ -1,0 +1,22 @@
+.Login__error {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                        0 6px 20px rgba(0, 0, 0, 0.1);
+	padding: 2em;
+	background-color: var(--color7);
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	width: 100%;
+	max-width: 27em;
+}
+.Login__error > h1 {
+	color: red;
+}
+.Login__error > button {
+	background-color: red;
+	border: none;
+	color: var(--color7);
+	padding: .7em;
+	width: 100%;
+	cursor: pointer;
+}

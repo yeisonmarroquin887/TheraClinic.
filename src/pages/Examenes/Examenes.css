@@ -1,0 +1,60 @@
+.Examenes {
+	width: 100%;
+}
+
+.Examenes__Header {
+	width: 100%;
+}
+
+
+
+.Examenes__info {
+	padding-top: 8em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5em;
+}
+.Examenes__info > h2 {
+    color: var(--color2);
+	font-size: 1.5em;
+	border-bottom: 2px solid var(--color2);
+}
+
+.Examenes__table {
+	width: 100%;
+	border-collapse: collapse;
+	max-width: 40em;
+	margin-bottom: 4em;
+}
+
+.Examenes__table th, .Examenes__table td {
+    padding: 12px 15px;
+    border: 1px solid var(--color5);
+    text-align: left;
+}
+
+.Examenes__table th {
+    background-color: var(--color2);
+    color: var(--color7);
+    font-weight: bold;
+}
+
+.Examenes__table tr:nth-child(even) {
+    background-color: var(--color7);
+}
+
+.Examenes__table tr:hover {
+    background-color: var(--color5);
+}
+
+.Examenes__table a {
+    color: var(--color3);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Examenes__table a:hover {
+    text-decoration: underline;
+	color: var(--color8);
+}

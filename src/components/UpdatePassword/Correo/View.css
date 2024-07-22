@@ -1,0 +1,45 @@
+.View__Email {
+	margin-bottom: 8em;
+}
+
+.View__Email-form {
+	background-color: var(--color5);
+    padding: 2em;
+	width: 100%;
+	max-width: 20em;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	margin-top: 12em;
+	border-radius: .5em;
+}
+
+.View__Email-form > h1 {
+	font-size: 1.1em;
+	font-weight: 550;
+}
+
+.View__Email-form  > div {
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+}
+
+.View__Email-form  > div > input {
+	padding: .4em;
+	border: none;
+	border-radius: .3em;
+}
+
+.View__Email-form  > button {
+	padding: .4em;
+	border: none;
+	width: 100%;
+	border-radius: .3em;
+	width: 100%;
+	max-width: 12em;
+	background-color: var(--color2);
+	color: var(--color7);
+	cursor: pointer;
+}

@@ -1,0 +1,171 @@
+.Chekeo {
+	margin-bottom: 2em;
+	margin-top: .7em;
+	display: flex;
+	flex-direction: column;
+	gap: .6em;
+}
+
+.Chekeo > h3 {
+	color: var(--color2);
+	font-size: 1em;
+}
+
+.btn-chekeo {
+	cursor: pointer;
+	width: 100%;
+	max-width: 8em;
+}
+
+.btn-chekeo:hover {
+	color: var(--color8);
+}
+
+.Container__visitas {
+	background-color: var(--color5);
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	border-radius: .5em;
+	position: fixed;
+	top: 0;
+	background-color: var(--color7);
+	z-index: 10000000;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.411);
+	margin-top: 10em;
+	top: 25%;
+	left: 65%;
+	transform: translate(-50%, -50%);
+
+}
+
+.TotalVisitas {
+	font-size: .8em;
+	margin-top: -.5em;
+	color: var(--color8);
+}
+
+.Container__visitas-close {
+	display: none;
+}
+
+.Container__visitas > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.volver-visita {
+	background-color: var(--color8);
+	color: var(--color7);
+	padding: .3em;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.impri {
+	display: none;
+}
+
+.download {
+	color: var(--color3);
+	cursor: pointer;
+}
+
+.download:hover {
+	color: var(--color6);
+	cursor: pointer;
+}
+
+.list{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	gap: 1.65em;
+}
+
+.list > i  {
+	width: 100%;
+	max-width: 2em;
+}
+
+.list li {
+	width: 100%;
+	max-width: 10em;
+}
+
+.list_edit {
+	color: var(--color3);
+	cursor: pointer;
+}
+
+
+
+.Update {
+    max-width: 600px;
+    padding: 20px;
+    background-color: var(--color7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color2);
+	position: fixed;
+	top: 0;
+	margin-top: 6em;
+	left: 40%;
+}
+
+.Update__close {
+	display: none;
+}
+
+.Update_chekeo {
+    max-width: 600px;
+    padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Update-group {
+    margin-bottom: 15px;
+}
+
+.Update-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.Update-group input,
+.Update-group select {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    border: 1px solid var(--color5);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.Update-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Update-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color2);
+    color: var(--color7);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Update-buttons button[type="button"] {
+    background-color: var(--color8);
+}
+
+.Update-buttons button:hover {
+    background-color: var(--color3);
+}
+
+

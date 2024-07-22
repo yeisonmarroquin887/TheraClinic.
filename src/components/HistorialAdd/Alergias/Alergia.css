@@ -1,0 +1,28 @@
+.Alergia {
+	margin-bottom: 2em;
+	margin-top: .7em;
+	display: flex;
+	flex-direction: column;
+	gap: .6em;
+}
+
+.Alergia > h3 {
+	color: var(--color2);
+	font-size: 1em;
+}
+
+.Alergia >  div {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+.Alergia >  div > i  {
+	width: 100%;
+	max-width: 20em;
+}
+
+.Alergia >  div > li {
+	width: 100%;
+	max-width: 10em;
+}

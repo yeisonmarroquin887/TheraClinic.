@@ -1,0 +1,331 @@
+.Citas {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+	font-family: Arial, sans-serif;
+  }
+  
+
+  
+  .Citas .container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: space-between;
+  }
+  
+  .Citas .calendar-container, .Citas .new-event-container {
+	flex: 1;
+	background-color: var(--color7);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Citas .calendar-container h2, .Citas .new-event-container h2 {
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+	color: var(--color2);
+  }
+  
+  .Citas form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+  }
+  
+  .Citas .form-group {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .Citas .form-group label {
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: var(--color6);
+  }
+  
+  .Citas .form-group input[type="text"],
+  .Citas .form-group input[type="date"],
+  .Citas .form-group input[type="time"],
+  .Citas .form-group input[type="tel"] {
+	padding: 7px;
+	font-size: 1rem;
+	border: 1px solid var(--color9);
+	border-radius: 4px;
+  }
+  
+  .AddCite {
+	background-color: var(--color2);
+	color: var(--color7);
+	border: none;
+	padding: 12px 20px;
+	font-size: 1rem;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .AddCite:hover {
+	background-color: var(--color3);
+  }
+  
+  .EventList {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+	font-family: Arial, sans-serif;
+  }
+
+  .EventList > h2 {
+	color: var(--color2);
+  }
+  
+  .List {
+	list-style-type: none;
+	padding: 0;
+	color: var(--color2);
+  }
+  
+  .ListItem {
+	margin-bottom: 20px;
+	padding: 15px;
+	background-color: var(--color7);
+	border: 1px solid var(--color7);
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	margin-top: 2em;
+  }
+  
+  .ListItemContent {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .ListItemTitle {
+	font-weight: bold;
+	font-size: 18px;
+  }
+  
+  .ListItemDetails {
+	font-size: 14px;
+	color: var(--color3);
+	margin: 5px 0;
+  }
+  
+  .ListItemActions {
+	display: flex;
+	gap: 10px;
+  }
+  
+  .ActionButton {
+	background-color: var(--color3);
+	color: var(--color7);
+	border: none;
+	padding: 8px 12px;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .ActionButton.whatsapp {
+	background-color: var(--color6);
+  }
+  
+  .ActionButton.delete {
+	background-color: var(--color8);
+  }
+  
+
+  
+  .ActionButton.whatsapp:hover {
+	filter: brightness(1.2);
+  }
+  
+  .ActionButton.delete:hover {
+	filter: brightness(1.2);
+  }
+  
+  .fc-event-title, .fc-event-time {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  }
+  
+  .fc .fc-daygrid-event {
+	font-size: 0.75rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  }
+  
+  .close {
+	display: none;
+  }
+
+  .Volver-add {
+	position: fixed;
+    width: 100%;
+    max-width: 7em;
+    top: 0;
+    margin-top: 6em;
+    border: none;
+    padding: .7em;
+    background-color: var(--color2) ;
+    color: var(--color7);
+    font-size: 1em;
+    cursor: pointer;
+	right: 0;
+  }
+
+  
+  @media (max-width: 1062px) {
+	
+	.EventList {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 20px;
+		font-family: Arial, sans-serif;
+		margin-top: 3em;
+	  }
+	
+	  .EventList > h2 {
+		color: var(--color2);
+	  }
+	  
+	  .List {
+		list-style-type: none;
+		padding: 0;
+		color: var(--color2);
+	  }
+	  
+	  .ListItem {
+		margin-bottom: 20px;
+		padding: 15px;
+		background-color: var(--color7);
+		border: 1px solid var(--color7);
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		width: 100%;
+		margin-top: 2em;
+	  }
+	  
+	  .ListItemContent {
+		display: flex;
+		flex-direction: column;
+	  }
+	  
+	  .ListItemTitle {
+		font-weight: bold;
+		font-size: 18px;
+	  }
+	  .ListItemDetails {
+		font-size: 14px;
+		color: var(--color3);
+		margin: 5px 0;
+	  }
+	  
+	  .ListItemActions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		align-items: center;
+		justify-content: center;
+	  }
+	.Citas .container {
+	  flex-direction: column;
+	}
+  
+	.Citas .calendar-container,
+	.Citas .new-event-container {
+	  width: 100%;
+	}
+	.ActionButton {
+		background-color: var(--color3);
+		color: var(--color7);
+		border: none;
+		padding: 8px 12px;
+		font-size: .7em;
+		cursor: pointer;
+		border-radius: 4px;
+		transition: background-color 0.3s ease;
+	  }
+	  
+	  .ActionButton.whatsapp {
+		background-color: var(--color6);
+		font-size: .7em;
+	  }
+	  
+	  .ActionButton.delete {
+		background-color: var(--color8);
+	  }
+  }
+  
+  .Cita-Update {
+	backdrop-filter: blur(4px);
+	width: 100%;
+	position: fixed;
+    top: 0;
+	width: 100%;
+	left: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 4.9em;
+  }
+
+  .Cita-Update-form {
+	background-color: var(--color7);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 2em;
+	width: 100%;
+	max-width: 40em;
+
+  }
+  
+
+  .form-group-update {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .form-group-updatelabel {
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: var(--color9);
+  }
+  
+  .form-group-update input[type="text"],
+  .form-group-update input[type="date"],
+  .form-group-update input[type="time"],
+  .form-group-update input[type="tel"] {
+	padding: 7px;
+	font-size: 1rem;
+	border: 1px solid var(--color9);
+	border-radius: 4px;
+  }
+
+  .update-close {
+	transform: scale(0);
+	width: 0;
+	height: 0;
+  }
+
+  .cerrarr {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+
+  .cerrarr > h1 {
+	font-size: 1.3em;
+	color: var(--color2);
+  }
+
+  .cerrarr > i {
+	font-size: 2em;
+	background-color: var(--color8);
+	color: var(--color7);
+	cursor: pointer;
+  }

@@ -1,0 +1,81 @@
+.Welcome__header{
+	padding-bottom: 4.6em;
+}
+.Welcome__Info {
+	display: flex;
+}
+
+.Welcome__Menu {
+	width: 100%;
+	max-width: 18em;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+	0 6px 20px rgba(0, 0, 0, 0.1);
+	margin-top: .3em;
+}
+
+.Welcome__Information {
+	width: 100%;
+	right: 0;
+	height: 100%;
+	margin-left: 18em;
+}
+
+.Menu__clochet {
+	width: 100%;
+	max-width: 18em;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+	0 6px 20px rgba(0, 0, 0, 0.1);
+	display: block;
+}
+.menu {
+	position: fixed;
+	display: none;
+}
+.menu > i {
+	font-size: 2em;
+	cursor: pointer;
+	
+}
+.Pacientes > h1 {
+	margin-top: 2em;
+}
+
+@media (max-width: 800px) {
+	.menu {
+		display: block;
+		padding: 1em;
+	}
+
+.Welcome__Menu {
+	width: 100%;
+	max-width: 18em;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+	0 6px 20px rgba(0, 0, 0, 0.1);
+	background-color: var(--color7);
+	display: block;
+	z-index: 1000000;
+}
+
+.Menu__clochet {
+	display: none;
+}
+
+.Welcome__Information {
+	width: 100%;
+	right: 0;
+	background-color: var(--color7);
+	height: 100%;
+	overflow-y: scroll;
+	margin-left: 0em;
+	display: block;
+}
+}

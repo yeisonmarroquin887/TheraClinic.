@@ -1,0 +1,39 @@
+.Medicamento {
+	margin-bottom: 2em;
+	margin-top: .7em;
+	display: flex;
+	flex-direction: column;
+	gap: .6em;
+}
+
+.Medicamento > h3 {
+	color: var(--color2);
+	font-size: 1em;
+}
+
+.Medicamento__info {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: var(--color1);
+}
+
+.Medicamento__info > div {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: var(--color1);
+	gap: .4em;
+}
+
+.Medicamento__info > div > h4 {
+	font-size: 1em;
+	font-weight: 550;
+}
+.Medicamento__info > div > p  {
+	font-weight: 400;
+	font-size: .9em;
+}
+.Medicamento__info > div > p > b {
+	font-weight: 580;
+}

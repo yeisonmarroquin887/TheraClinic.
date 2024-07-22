@@ -1,0 +1,115 @@
+.Malestar {
+	margin-bottom: 2em;
+	margin-top: .7em;
+	display: flex;
+	flex-direction: column;
+	gap: .6em;
+}
+
+.Malestar > h3 {
+	color: var(--color2);
+	font-size: 1em;
+}
+
+.Malestar__info {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: var(--color1);
+	gap: .4em;
+}
+
+.Malestar__info > h4 {
+	font-size: 1.1em;
+}
+
+.Malestar__info > p {
+	font-weight: 550;
+	font-size: 1em;
+}
+
+.Malestar__info > li {
+	font-size: .9em;
+}
+
+.Malestar__info > li > b {
+	font-weight: 550;
+}
+
+.Malestar__info > div {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 10em;
+}
+
+.Malestar__info > div > button {
+	color: var(--color7);
+	padding: .25em;
+	border: none;
+	width: 100%;
+	max-width: 5.5em;
+	cursor: pointer;
+}
+
+
+.ActualizarMalestar {
+	width: 100%;
+    max-width: 20em;
+    padding: 20px;
+    background-color: var(--color7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color3);
+    margin-top: 20px;
+	position: fixed;
+	top: 0;
+	margin-top: 9em;
+	left: 50%;
+}
+
+.ActualizarMalestar-group {
+    margin-bottom: 15px;
+}
+
+.ActualizarMalestar-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.ActualizarMalestar-group input,
+.ActualizarMalestar-group select {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    border: 1px solid var(--color5);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.ActualizarMalestar-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ActualizarMalestar-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color2);
+    color: var(--color7);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ActualizarMalestar-buttons button[type="button"] {
+    background-color: var(--color8);
+}
+
+.ActualizarMalestar-buttons button:hover {
+    background-color: var(--color3);
+}
+
+.ActualizarMalestar-buttons button[type="button"]:hover {
+    background-color: var(--color8);
+}
