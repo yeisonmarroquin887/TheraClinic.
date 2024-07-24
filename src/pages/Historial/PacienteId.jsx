@@ -257,16 +257,8 @@ const PacienteId = () => {
                                 <input id="Telefono" type="text" {...register('Telefono')} defaultValue={paciente?.Telefono} readOnly={!editMode} />
                             </div>
                             <div className="PacienteId__form-group">
-                                <label htmlFor="Peso">Peso:</label>
-                                <input id="Peso" type="text" {...register('Peso')} defaultValue={paciente?.Peso} readOnly={!editMode} />
-                            </div>
-                            <div className="PacienteId__form-group">
                                 <label htmlFor="Edad">Edad:</label>
                                 <input id="Edad" type="text" {...register('Edad')} defaultValue={paciente?.Edad} readOnly={!editMode} />
-                            </div>
-                            <div className="PacienteId__form-group">
-                                <label htmlFor="Altura">Altura:</label>
-                                <input id="Altura" type="text" {...register('Altura')} defaultValue={paciente?.Altura} readOnly={!editMode} />
                             </div>
                             <div className="PacienteId__form-group">
                                 <label htmlFor="Estado">Estado:</label>

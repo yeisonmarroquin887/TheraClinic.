@@ -17,6 +17,8 @@
 	width: 100%;
 	color: var(--color1);
 	gap: .4em;
+	
+	margin-bottom: 3em;
 }
 
 .Malestar__info > h4 {

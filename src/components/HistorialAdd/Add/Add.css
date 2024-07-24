@@ -63,6 +63,14 @@
 	border-radius: .2em;
 }
 
+.Add__form > div  > textarea {
+	padding: .5em;
+	border: none;
+	border-radius: .2em;
+	width: 100%;
+	max-width: 27em;
+}
+
 .Add__btn {
 	display: flex;
 	align-items: center;
@@ -85,7 +93,7 @@
 	background-color: var(--color5);
 	padding: 1em;
 	width: 100%;
-	max-width: 30em;
+	max-width: 60em;
 	align-items: center;
 	
 }
@@ -94,7 +102,7 @@
 	padding: 1em;
 	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	gap: 1em;
 
 }
@@ -114,7 +122,18 @@
 	padding: .5em;
 	border: none;
 	border-radius: .2em;
+	width: 100%;
+	max-width: 25em;
 }
+
+.Add__form-chekeo > div > div  > textarea {
+	padding: .5em;
+	border: none;
+	border-radius: .2em;
+	width: 100%;
+	max-width: 20em;
+}
+
 
 .Add__btn-chekeo {
 	display: flex;
@@ -366,11 +385,20 @@
 .deuda-footer {
 	position: absolute;
 	background-color: var(--color2);
-	color: var(--color7);
 	max-width: 30em;
 	bottom: 0;
 	padding: 1em;
 	left: 0;
+}
+
+.deuda-footer > p {
+	color: var(--color8);
+	font-weight: 700;
+}
+
+.deuda-footer > p > span{
+	color: var(--color7);
+	font-weight: 800;
 }
 
 .Add__Examenes {
@@ -455,6 +483,36 @@
 	color: var(--color7);
 	cursor: pointer;
 	border-radius: .3em;
+}
+
+@media (max-width: 1120px) {
+	.Add__form-chekeo{
+		box-shadow: 0 0 10px var(--color4);
+		background-color: var(--color5);
+		padding: 1em;
+		width: 100%;
+		max-width: 50em;
+		align-items: center;
+		
+	}
+	
+	.Add__form-chekeo > div {
+		padding: 1em;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1em;
+	
+	}
+
+	.Add__form-chekeo > div > div  > textarea {
+		padding: .5em;
+		border: none;
+		border-radius: .2em;
+		width: 100%;
+		max-width: 25em;
+	}
+	
 }
 
 @media (max-width: 600px) {

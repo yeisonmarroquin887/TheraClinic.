@@ -13,7 +13,7 @@ const View = ({setUpdatePassword}) => {
     }
 
 	const submit = (data) => {
-		const urlfront = "http://localhost:5173"
+		const urlfront = "https://subtle-gumption-bafb43.netlify.app"
 		data.urlfront = urlfront;
 		axios.post(`${Api}/terapeutas/verify`, data)
 		.then(res => {

@@ -1,10 +1,12 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 const Api = import.meta.env.VITE_REACT_APP_URL;
 
 const Actualizar = ({ dataActualizar, Update, setUpdate }) => {
     const { register, handleSubmit, reset, setValue } = useForm();
+    
+    const [malestars, setmalestars] = useState()
 
     useEffect(() => {
         // Establecer valores del formulario cuando dataActualizar cambie
@@ -17,6 +19,7 @@ const Actualizar = ({ dataActualizar, Update, setUpdate }) => {
 
     const onSubmit = (data) => {
         console.log(data);
+        data.Malestar = data.malestarId
         // Aquí puedes hacer la petición de actualización usando axios
         axios.put(`${Api}/visitas/${dataActualizar.id}`, data)
             .then(response => {
@@ -27,6 +30,12 @@ const Actualizar = ({ dataActualizar, Update, setUpdate }) => {
                 console.error(error);
             });
     };
+
+    useEffect(() => {
+        axios.get(`${Api}/malestares`)
+        .then(res => setmalestars(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
     return (
         <form className={Update ? 'Update' : 'Update__close'} onSubmit={handleSubmit(onSubmit)}>
@@ -44,6 +53,14 @@ const Actualizar = ({ dataActualizar, Update, setUpdate }) => {
                     <input type="number" {...register("Pulsaciones")} id="pulsaciones" required />
                 </div>
                 <div className="Update-group">
+            <label htmlFor="">Altura</label>
+            <input {...register("Altura")} type="number" step="0.01" min="0" max="3" required />
+          </div>
+          <div className="Update-group">
+            <label htmlFor="">Peso</label>
+            <input {...register("Peso")} type="number" required />
+          </div>
+                <div className="Update-group">
                     <label htmlFor="glucosa">Glucosa</label>
                     <input type="number" {...register("Glucosa")} id="glucosa" required />
                 </div>
@@ -52,8 +69,12 @@ const Actualizar = ({ dataActualizar, Update, setUpdate }) => {
                     <input type="text" {...register("Digestion")} id="digestion" required />
                 </div>
                 <div className="Update-group">
+                    <label htmlFor="Cirugias">Cirugias</label>
+                    <textarea type="text" {...register("Cirugias")} id="Cirugias"  required />
+                </div>
+                <div className="Update-group">
                     <label htmlFor="observacion">Observación</label>
-                    <input type="text" {...register("Observacion")} id="observacion" required />
+                    <textarea type="text" {...register("Observacion")} id="observacion" required />
                 </div>
                 <div className="Update-group">
                     <label htmlFor="problemasEquilibrio">Problemas de Equilibrio</label>
@@ -73,11 +94,18 @@ const Actualizar = ({ dataActualizar, Update, setUpdate }) => {
                 </div>
                 <div className="Update-group">
                     <label htmlFor="malestar">Malestar</label>
-                    <input type="text" {...register("Malestar")} id="malestar" required />
+                    <select name="" id="" {...register("malestarId")}>
+                        <option value="">Selecciona un malestar</option>
+                        {
+                            malestars?.map(res => (
+                                <option value={res.id}>{res.NombreMalestar}</option>
+                            ))
+                        }
+                    </select>
                 </div>
                 <div className="Update-group">
                     <label htmlFor="recomendacion">Recomendación</label>
-                    <input type="text" {...register("Recomendacion")} id="recomendacion" required />
+                    <textarea type="text" {...register("Recomendacion")} id="recomendacion" required />
                 </div>
             </div>
 

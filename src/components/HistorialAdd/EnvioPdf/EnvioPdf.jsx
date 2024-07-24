@@ -11,6 +11,7 @@ const EnvioPdf = ({ PacienteOne, IdChekeo, componentRef }) => {
     }
   }, [PacienteOne, IdChekeo]);
 
+  console.log(PacienteOne)
 
 
   return (
@@ -31,11 +32,13 @@ const EnvioPdf = ({ PacienteOne, IdChekeo, componentRef }) => {
           {Checkeo && (
             <ul>
               <li><b>Fecha de creación:</b> {Checkeo?.FechaAdd}</li>
-              <li><b>Malestar:</b> {Checkeo?.Malestar}</li>
+              <li><b>Malestar:</b> {Checkeo?.malestar.NombreMalestar}</li>
               <li><b>Nivel de sistólica:</b> {Checkeo?.Sistolica}</li>
               <li><b>Nivel de diastólica:</b> {Checkeo?.Diastolica}</li>
               <li><b>Nivel de glucosa:</b> {Checkeo?.Glucosa}</li>
               <li><b>Pulsaciones:</b> {Checkeo?.Pulsaciones}</li>
+              <li><b>Peso:</b> {Checkeo?.Peso}</li>
+              <li><b>Altura:</b> {Checkeo?.Altura}</li>
               <li><b>Digestión:</b> {Checkeo?.Digestion}</li>
               <li><b>Recomendación médica:</b> {Checkeo?.Recomendacion}</li>
             </ul>

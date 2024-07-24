@@ -49,14 +49,7 @@ const AddPaciente = ({option}) => {
               <option value="Femenino">Femenino</option>
             </select>
           </div>
-          <div>
-            <label htmlFor="">Altura</label>
-            <input {...register("Altura")} type="number" step="0.01" min="0" max="3" required />
-          </div>
-          <div>
-            <label htmlFor="">Peso</label>
-            <input {...register("Peso")} type="number" required />
-          </div>
+
           <div>
             <label htmlFor="">Cedula</label>
             <input {...register("Identificacion")} type="number" required />

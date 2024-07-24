@@ -16,7 +16,7 @@ const AddMalestares = ({pacienteId, onNew, setAddnew}) => {
 	<form className='Add__form' action="" onSubmit={handleSubmit(createMalestar)}>
 	<div>
 		<label htmlFor="">Nombre del Malestar:</label>
-		<input {...register("NombreMalestar")} type="text" required />
+		<textarea {...register("NombreMalestar")} type="text" required />
 	</div>
 	<div>
 		<label htmlFor="">Desde cuando lo tiene:</label>

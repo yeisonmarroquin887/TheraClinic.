@@ -27,6 +27,20 @@ const Examenes = () => {
         navigate(`/historia/${pacienteId}`)
     }
 
+    const deletePdf = (id) => {
+        axios.delete(`${Api}/archivos/${id}`)
+        .then(res => {
+            alert(`${res.data.message}`)
+            dispatch(setPacienteOne({
+                ...PacienteOne,
+                archivos: PacienteOne.archivos.filter(archivos => archivos.id !== id)
+            }));
+        })
+        .catch(err => {
+            alert("Error al eliminar el archivo")
+        })
+    }
+
     const cerrar = () => {
         localStorage.removeItem("authToken")
         localStorage.removeItem("IdPaciente")
@@ -50,6 +64,7 @@ const Examenes = () => {
                                 <th>Nombre</th>
                                 <th>Fecha</th>
                                 <th>Ver</th>
+                                <th>Eliminar</th>
                             </tr>
                         </thead>
                         <tbody className='Examenes__tbody'>
@@ -64,6 +79,7 @@ const Examenes = () => {
                                 >
                                     Visualización
                                 </a></td>
+                                <td > <span className='deleteAr' onClick={() => deletePdf(archivo.id)}>Eliminar</span> </td>
                             </tr>
                         ))}                            
                         </tbody>

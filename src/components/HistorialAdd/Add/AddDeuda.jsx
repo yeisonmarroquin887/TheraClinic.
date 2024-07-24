@@ -115,7 +115,7 @@ const res = sumaTotal.toLocaleString('de-DE');
             }
 				</article>
 				<footer className='deuda-footer'>
-					<p> <b>Total a pagar:</b> {res} pesos</p>
+					<p> <span className='Deuda-text'>Total a pagar:</span> {res} pesos</p>
 				</footer>
 			</section>
 		</div>

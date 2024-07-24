@@ -30,7 +30,7 @@ const Header = ({cerrar}) => {
         <figure>
           <img src="../../../../images/logo.png" alt="Logo" />
         </figure>
-        <h1>TheraClinic</h1>
+        <h1>Nufacol</h1>
       </div>
       <h1 className='Hora'>{formatTime(time)}</h1>
           <button className='Cerrar-Sesion' onClick={cerrar}>Cerrar sesión </button>

@@ -30,7 +30,10 @@ const Login = ({setUpdatePassword}) => {
 		</header>
 		<form className='Login__form' onSubmit={handleSubmit(submit)}>
 			<figure className='Login__figure'>
-				<img src="../../../images/Login.png" alt="imagen" />
+				<div className='image-loggin'>
+					<img src="../../../images/Login.jpg" alt="" />
+					<h1>Terapias alternativas</h1>
+				</div>
 			</figure>
 			<div className='Login__datos'>
 				<div>

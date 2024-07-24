@@ -108,11 +108,10 @@
     background-color: var(--color7);
     border-radius: 10px;
     box-shadow: 0 0 10px var(--color2);
-	position: fixed;
 	top: 0;
-	margin-top: 6em;
 	left: 40%;
 }
+
 
 .Update__close {
 	display: none;
@@ -142,6 +141,12 @@
     border: 1px solid var(--color5);
     border-radius: 5px;
     font-size: 1rem;
+}
+
+.Update-group > textarea {
+	width: 100%;
+	max-width: 11.5em;
+	padding: .5em;
 }
 
 .Update-buttons {

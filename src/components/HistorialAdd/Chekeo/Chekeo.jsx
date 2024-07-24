@@ -67,16 +67,19 @@ const Chekeo = ({chekeo, RemoveVisita, PacienteOne}) => {
 				<h1>Visitas</h1>
 				<i onClick={() => setchekeoabri(false)} className='volver-visita bx bx-x'></i>
 			</div>
+			
 			<li><b>Fecha de vista del paciente: </b><span>{visita?.FechaAdd}</span></li>
+			<li><b>Malestar</b> {visita?.malestar?.NombreMalestar || 'No disponible'} </li>
 			<li><b>Sistolica:</b> {visita?.Sistolica}</li>
 			<li><b>Diastolica:</b> {visita?.Diastolica} </li>
 			<li><b>Pulsaciones:</b> {visita?.Pulsaciones} </li>
-			<li><b>Glucosa:</b> {visita?.Glucosa} </li>
+			<li><b>Peso:</b> {visita?.Peso} </li>
+			<li><b>Altura:</b> {visita?.Altura} </li>
 			<li><b>Dolor de cabeza</b> {visita?.DolorCabeza} </li>
 			<li><b>Problema de eqilibrio</b> {visita?.ProblemasEquilibrio} </li>
+			<li><b>Cirugias</b> {visita?.Cirugias} </li>
 			<li><b>Observacion</b> {visita?.Observacion} </li>
 			<li><b>Recomendacion:</b> {visita?.Recomendacion} </li>
-			<li><b>Malestar</b> {visita?.Malestar} </li>
 		</article>
 	</div>
   )
