@@ -290,7 +290,7 @@ const PacienteId = () => {
                                     <option value="Solter@">Solter@</option>
                                     <option value="Union libre">Union libre</option>
                                     <option value="Casado">Casado</option>
-                                    <option value="viud@">Viud@</option>
+                                    <option value="Viudo@">Viud@</option>
                                 </select>
                             </div>
                             <div className="PacienteId__form-group">

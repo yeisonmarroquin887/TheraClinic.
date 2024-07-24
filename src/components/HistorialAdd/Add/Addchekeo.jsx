@@ -3,13 +3,13 @@ import { useForm } from 'react-hook-form'
 import './Add.css'
 import useAplication from '../../../Hooks/useAplication'
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 const Api = import.meta.env.VITE_REACT_APP_URL;
 
 const Addchekeo = ({pacienteId, onNew, setAddnew}) => {
     const { handleSubmit, reset, register } = useForm()
     const { AddCrud } = useAplication();
     const [malestars, setmalestars] = useState()
-
     const submit = async (data) => {
         const api = `${Api}/visitas`
         const message = "chekeo asociado"
@@ -22,10 +22,11 @@ const Addchekeo = ({pacienteId, onNew, setAddnew}) => {
     }
 
     useEffect(() => {
-        axios.get(`${Api}/malestares`)
+        axios.get(`${Api}/pacientes/3`)
         .then(res => setmalestars(res.data))
         .catch(err => console.log(err))
     }, [])
+
 
     return (
         <form className='Add__form-chekeo' onSubmit={handleSubmit(submit)} action="">
@@ -87,7 +88,7 @@ const Addchekeo = ({pacienteId, onNew, setAddnew}) => {
                     <select name="" id="" {...register("malestarId")}>
                         <option value="">Selecciona un malestar</option>
                         {
-                            malestars?.map(res => (
+                            malestars?.malestars?.map(res => (
                                 <option value={res.id}>{res.NombreMalestar}</option>
                             ))
                         }
