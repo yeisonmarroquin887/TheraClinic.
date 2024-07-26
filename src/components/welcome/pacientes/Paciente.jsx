@@ -8,7 +8,9 @@ const Api = import.meta.env.VITE_REACT_APP_URL;
 const Paciente = ({ option }) => {
   const { GetPacientes, Pacientes } = useAplication();
   const [filteredPacientes, setFilteredPacientes] = useState([]);
-  const [isLoading, setIsLoading] = useState(false); // Estado para controlar la carga
+  const [searchCedula, setSearchCedula] = useState('');
+  const [searchName, setSearchName] = useState('');
+  const [isLoading, setIsLoading] = useState(true); // Estado para controlar la carga
 
   useEffect(() => {
     GetPacientes();
@@ -18,19 +20,26 @@ const Paciente = ({ option }) => {
     setFilteredPacientes(Pacientes);
   }, [Pacientes]);
 
+  useEffect(() => {
+    filterPacientes();
+  }, [searchCedula, searchName]);
+
   const navigate = useNavigate();
 
   const Historial = (id) => {
     navigate(`/historia/${id}`);
   };
 
-  const Filter = (n) => {
-    setIsLoading(true); 
-    setTimeout(() => { 
-      const filtered = Pacientes.filter(user => user.Identificacion.toString().includes(n));
+  const filterPacientes = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      const filtered = Pacientes.filter(user =>
+        user.Identificacion.toString().includes(searchCedula) &&
+        user.Nombres.toLowerCase().includes(searchName.toLowerCase())
+      );
       setFilteredPacientes(filtered);
-      setIsLoading(false); 
-    }, 500); 
+      setIsLoading(false);
+    }, 500);
   };
 
   const RemovePaciente = (id) => {
@@ -54,25 +63,30 @@ const Paciente = ({ option }) => {
       <h1>Pacientes</h1>
       <section className='Paciente'>
         <header className="table-header">
-          <div className="search-bar">
-            <label htmlFor="buscar">Buscar</label>
-            <input 
-              type="number" 
-              id="buscar" 
-              placeholder="Buscar por cédula..." 
-              onChange={(e) => Filter(e.target.value)} 
-            />
+          <div className="search-bar"> 
+            <label htmlFor="buscar">Buscar:</label>
+            <div>
+              <input 
+                type="number" 
+                id="buscar" 
+                placeholder="Buscar por cédula..." 
+                onChange={(e) => setSearchCedula(e.target.value)} 
+              />
+            </div>
+            <div>
+              <input 
+                type="text" 
+                placeholder='Busca por nombres' 
+                onChange={(e) => setSearchName(e.target.value)} 
+              />
+            </div>
           </div>
           <button onClick={() => option(1)} className="add-button">
             <i className='bx bx-user-plus'></i>
             <span>Nuevo</span>
           </button>
         </header>
-        {isLoading ? (
-          <div className="loading">Cargando...</div> // Indicador de carga
-        ) : filteredPacientes && filteredPacientes.length === 0 ? (
-          <div className="no-results">El usuario no existe</div> // Mensaje de no resultados
-        ) : (
+        
           <table className="patient-table">
             <thead>
               <tr>
@@ -102,7 +116,7 @@ const Paciente = ({ option }) => {
               ))}
             </tbody>
           </table>
-        )}
+     
       </section>
     </div>
   );

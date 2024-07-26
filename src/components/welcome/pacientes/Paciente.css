@@ -33,10 +33,13 @@
 	display: flex;
 	align-items: center;
 	margin-top: 10px;
+	gap: 1em;
 }
 
+
+
 .search-bar label {
-	margin-right: 10px;
+	margin-right: 0px;
 }
 
 .search-bar input {
@@ -44,6 +47,12 @@
 	border: 1px solid var(--color9);
 	border-radius: 5px;
 	font-size: 16px;
+	transition: border-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.search-bar input:focus {
+	border-color: var(--color3); /* Cambia el color del borde cuando el input está en foco */
+	outline: none; /* Elimina el contorno predeterminado del navegador */
 }
 
 .add-button {
@@ -144,6 +153,9 @@
 	.search-bar {
 		width: 100%;
 		margin-top: 0.5em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	
 	.search-bar input {
