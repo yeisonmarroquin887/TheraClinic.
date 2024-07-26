@@ -20,9 +20,9 @@ const Addchekeo = ({pacienteId, onNew, setAddnew}) => {
 		console.log(data)
 		AddCrud(api, data, message, reset, onNew)
     }
-
+console.log(pacienteId)
     useEffect(() => {
-        axios.get(`${Api}/pacientes/3`)
+        axios.get(`${Api}/pacientes/${pacienteId}`)
         .then(res => setmalestars(res.data))
         .catch(err => console.log(err))
     }, [])
