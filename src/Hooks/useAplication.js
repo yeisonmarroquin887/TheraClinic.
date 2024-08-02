@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useState } from "react"
 import getConfingToken from "../utils/getConfingToken";
+import { useNavigate } from "react-router-dom";
 const Api = import.meta.env.VITE_REACT_APP_URL;
 
 const useAplication = () => {
-
+    const navigate = useNavigate()
 	const [Pacientes, setPacientes] = useState(null)
 	const GetPacientes = () => {
 			axios.get(`${Api}/pacientes`, getConfingToken())
@@ -16,11 +17,17 @@ const useAplication = () => {
 		console.log(data)
 		axios.post(`${Api}/pacientes`, data, getConfingToken())
 		.then((res) => {
-			alert(`${res.data.message}`)
+			
 			reset()
-			setAddAcom(false)
 			localStorage.setItem("IdPaciente", res.data.Usuario.id)
 			console.log(res.data)
+			const userChoice = window.confirm(`Paciente creado exitosamente. ¿Deseas agregar el acompañante? Si no, serás redirigido a la historia clínica.`);
+			if(userChoice){
+				setAddAcom(false)
+			}else{
+				let id = localStorage.getItem("IdPaciente")
+				navigate(`/historia/${id}`)
+			}
 		})
 		.catch(err => {
 			alert("Lo siento pero el Usuario no se pudo crear")
@@ -39,6 +46,8 @@ const useAplication = () => {
 			alert("Acompañante asociacdo");			
 			reset();
 			setAdd(true)
+			let id = localStorage.getItem("IdPaciente")
+				navigate(`/historia/${id}`)
 			localStorage.removeItem("authToken")
 			if (onNew) {
 				onNew(res.data.Usuario);
