@@ -5,6 +5,7 @@ import useAplication from '../../../Hooks/useAplication'
 import axios from 'axios';
 import AddNewPdf from './AddNewPdf';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 const Api = import.meta.env.VITE_REACT_APP_URL;
 
 const AddDeuda = ({paciente, onNew, setPacienteOne, onNew1}) => {
@@ -14,7 +15,7 @@ const [VerDeuda, setVerDeuda] = useState(false)
 const {handleSubmit, register, reset} = useForm()
 const {AddCrud} = useAplication()
 const url = `${Api}/deudas`
-
+const dispatch =  useDispatch()
 const navigate = useNavigate();
 
 const irexamen = () => {
@@ -36,10 +37,12 @@ const remove = (id) => {
 	axios.delete(`${url}/${id}`)
 	.then(res => {
 		alert(`${res.data.message}`)
-		setPacienteOne(prevPaciente => ({
-			...prevPaciente,
-			deudas: prevPaciente.deudas.filter(deudas => deudas.id !== id)
+		
+		dispatch(setPacienteOne({
+			...paciente,
+			deudas: paciente.deudas.filter(deudas => deudas.id !== id)
 		}));
+		
 	})
 	.catch(err => {
 		console.log(err)
@@ -53,6 +56,9 @@ const array = paciente?.deudas.forEach(element => {
 });
 const sumaTotal = ar.reduce((acc, curr) => acc + curr, 0);
 const res = sumaTotal.toLocaleString('de-DE');
+
+console.log(paciente)
+
   return (
 	<div className='AddDeuda__info'>
 		<div className={AddDeudaNew ? "AddNewDeuda" : "AddNewDeuda__close"}>
